@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+import Mp1 from '../public/audio/11067312.mp3';
+import Mp2 from '../public/audio/9155952.mp3';
 const App = () => {
   const [workouts, setWorkouts] = useState([
     { id: 1, name: 'Push-ups', sets: 4, reps: 25, completed: false },
@@ -31,15 +33,13 @@ const App = () => {
       </div>
       <AudioPlayer
       className='mt-4'
-      src="https://dl2.mp3party.net/online/11067312.mp3"
+      src={Mp1} 
       onPlay={e => console.log("onPlay")}
-      // ...other props
     />
     <AudioPlayer
       className='mt-4'
-      src="https://dl2.mp3party.net/online/9155952.mp3"
+           src={Mp2} 
       onPlay={e => console.log("onPlay")}
-      // ...other props
     />
     </div>
   );
