@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 const App = () => {
   const [workouts, setWorkouts] = useState([
     { id: 1, name: 'Push-ups', sets: 4, reps: 25, completed: false },
@@ -28,14 +29,16 @@ const App = () => {
           </div>
         ))}
       </div>
-      <audio controls className="mt-4">
-        <source src="https://dl2.mp3party.net/online/11067312.mp3" type="audio/mpeg" />
-        Sizning brauzeringiz audio elementni qo'llab-quvvatlamaydi.
-      </audio>
-      <audio controls className="mt-4">
-        <source src="https://dl2.mp3party.net/online/9155952.mp3" type="audio/mpeg" />
-        Sizning brauzeringiz audio elementni qo'llab-quvvatlamaydi.
-      </audio>
+      <AudioPlayer
+      src="https://dl2.mp3party.net/online/11067312.mp3"
+      onPlay={e => console.log("onPlay")}
+      // ...other props
+    />
+    <AudioPlayer
+      src="https://dl2.mp3party.net/online/9155952.mp3"
+      onPlay={e => console.log("onPlay")}
+      // ...other props
+    />
     </div>
   );
 };
