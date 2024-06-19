@@ -30,11 +30,13 @@ const App = () => {
         ))}
       </div>
       <AudioPlayer
+      className='mt-4'
       src="https://dl2.mp3party.net/online/11067312.mp3"
       onPlay={e => console.log("onPlay")}
       // ...other props
     />
     <AudioPlayer
+      className='mt-4'
       src="https://dl2.mp3party.net/online/9155952.mp3"
       onPlay={e => console.log("onPlay")}
       // ...other props
