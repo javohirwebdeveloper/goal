@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import Mp1 from '../public/audio/11067312.mp3';
-import Mp2 from '../public/audio/9155952.mp3';import Countdown from 'react-countdown-now';
+import Mp2 from '../public/audio/9155952.mp3';
 
 const App = () => {
   const [workouts, setWorkouts] = useState([
