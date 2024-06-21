@@ -3,6 +3,7 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import Mp1 from '../public/audio/11067312.mp3';
 import Mp2 from '../public/audio/9155952.mp3';
+import Mp3 from '../public/audio/11.mp3';
 
 const App = () => {
   const [workouts, setWorkouts] = useState([
@@ -69,6 +70,10 @@ const [plank, setPlank] = useState(false);
     <AudioPlayer
       className='mt-4'
            src={Mp2} 
+      onPlay={e => console.log("onPlay")}
+    /><AudioPlayer
+      className='mt-4'
+           src={Mp3} 
       onPlay={e => console.log("onPlay")}
     />
     </div>
